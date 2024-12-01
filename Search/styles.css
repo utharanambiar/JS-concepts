@@ -1,0 +1,15 @@
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin: 10px;
+}
+
+.card {
+  border: 1px black solid;
+  padding: 5px;
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
