@@ -21,3 +21,20 @@ Array.prototype.myFlat = function (depth = 1){
 }
 
 console.log(arr.myFlat(2))
+
+
+Array.prototype.myFlatIterative = function (depth = 1){
+    let flattened = [...this]
+    let i=0, currDepth = 0
+    while(i<flattened.length){
+        if(Array.isArray(flattened[i]) && currDepth<depth){
+            flattened.splice(i, 1, ...flattened[i])
+            currDepth++
+        } else {
+            i++
+        }
+    }
+    return flattened
+}
+
+console.log("ans:",arr.myFlatIterative())
