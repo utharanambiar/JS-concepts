@@ -37,4 +37,4 @@ Array.prototype.myFlatIterative = function (depth = 1){
     return flattened
 }
 
-console.log("ans:",arr.myFlatIterative())
+console.log("ans:", arr.myFlatIterative())
