@@ -14,7 +14,7 @@ withBred(4);
 
 // 2: Using closures
 
-function calculateVolume(length) {
+let vol = function calculateVolume(length) {
   return function (breadth) {
     return function (height) {
       return length * breadth * height;
@@ -22,4 +22,6 @@ function calculateVolume(length) {
   };
 }
 
-console.log(calculateVolume(4)(5)(6));
+let res1 = vol(4)
+let res2 = res1(5)
+console.log(res2(6));
